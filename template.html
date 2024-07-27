@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blogin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans";
+margin: 0;}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+.topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+  .button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4c99af;
+  height: 50px; ;
+}
+
+.button1:hover {
+  background-color: #4c99af;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #ba2500;
+}
+
+.button2:hover {
+  background-color: #ba2500;
+  color: white;
+}
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(20, 19, 20);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+.like-icon {
+      font-size: 20px;
+      color: #007bff;
+      cursor: pointer;
+    }
+    .like-count {
+      display: inline-block;
+      margin-left: 5px;
+      font-weight: bold;
+    }
+    .blog-post {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comment-form {
+    margin-top: 20px;
+}
+
+#commentList {
+    list-style: none;
+    padding: 0;
+}
+
+.comment {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+</style>
+</head>
+<body class="w3-light-grey">
+
+
+<div class="topnav">
+  <nav class="navbar">
+    <ul class="nav-list" id="socialMediaLinks">
+      <a href="#" class="navbar-link"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="navbar-link"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="navbar-link"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="navbar-link"><i class="fab fa-linkedin"></i></a>
+    </ul>
+</nav>
+
+<script src="script.js"></script>
+</div>
+<div class="w3-content" style="max-width:1600px">
+
+  
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>Blogin</b></h1>
+    <h6>Unveiling Perspectives: <span class="w3-tag">Where Words Take Flight</span></h6>
+  </header>
+
+  
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="https://img.freepik.com/free-photo/technology-communication-icons-symbols-concept_53876-120314.jpg?size=626&ext=jpg&uid=R111039299&ga=GA1.2.400545424.1690471510&semt=sph" alt="Blogin" width="1600" height="1060">
+    
+  </header>
+
+  
+  <div class="w3-row w3-padding w3-border">
+
+    
+    <div class="w3-col l8 s12">
+    
+      
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>VIENNA ITINERARY: HOW TO SPEND 3 DAYS IN VIENNA
+          </h3>
+          <h5>Last Updated, <span class="w3-opacity">7/21/23 | July 21st, 2023</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="https://cdn.pixabay.com/photo/2019/08/13/17/17/vienna-state-opera-4403839_640.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16">
+          <p>Steeped in culture, arts, music, and history, Vienna is one of the most beautiful cities in Europe. (At least I think so!)
+
+            The entire historic center of Vienna is a designated UNESCO World Heritage Site, it is filled with countless museums and art galleries, grand Baroque palaces, traditional markets, and fantastic restaurants.
+            
+            I’ll admit that I didn’t love Vienna when I first visited. I found it a bit stuffy and imperial (which makes sense given its history). But, after a couple of visits, I grew to love it and found it a city full of life, art, and music. I loved it so much I took groups of readers here!
+            There is a lot to do here. (In fact, there’s so much that you could easily spend a week here and not get bored.)
+
+But, if you only have a few days, here’s my suggested three-day Vienna itinerary if you’re short on time. It hits all the highlights.
+            <a href="https://www.nomadicmatt.com/travel-blogs/3-day-vienna-itinerary/" class="btn btn-primary">Read More →</a>
+          </p>
+          <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+          <span class="like-count">0</span>
+<script>
+function myFunction(likeIcon) {
+      const likeCountElement = likeIcon.nextElementSibling;
+      let likeCount = parseInt(likeCountElement.textContent);
+      if (likeIcon.classList.contains('liked')) {
+        likeIcon.classList.remove('liked');
+        likeCount--;
+      } else {
+        likeIcon.classList.add('liked');
+        likeCount++;
+      }
+      likeCountElement.textContent = likeCount;
+    }
+</script>
+<div id="comment-section">
+  <h2>Comments</h2>
+  <ul id="comment-list"></ul>
+  <form id="comment-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" rows="1" required></textarea><br><br>
+      <button type="button"class="button button1" onclick="postComment()">Submit Comment</button>
+  </form>
+</div>
+        </div>
+      </div>
+      <hr>
+
+    
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Pesto Pasta Salad</h3>
+          <h5>Last Updated <span class="w3-opacity">JULY 12, 2023</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="https://cookieandkate.com/images/2016/10/pesto-pasta-salad-recipe-2-768x1154.jpg" alt="Men in Hats" style="width:50%" class="w3-padding-16">
+        
+          <p>This pesto pasta salad is destined for your next gathering. Or at least, that’s what I hope! This recipe is light and so fresh. It’s perfect for parties, picnics and weeknight dinners, from spring through fall. Leftovers keep well for lunch, too.
+
+            Pesto and pasta are the stars of this show, naturally. To make it a pasta salad, I added a pint of cherry tomatoes, a few handfuls of fresh arugula, and some cheese. I love salty feta in this recipe, though mozzarella and Parmesan are also great.
+            This pasta salad recipe includes homemade pesto made with a few little twists. Instead of pine nuts, I opted for more affordable pepitas (green pumpkin seeds). You can use pine nuts if you’d rather—or even walnuts or pecans.
+            <a href="https://cookieandkate.com/pesto-pasta-salad-recipe/" class="btn btn-primary">Read More →</a></p>
+            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+          <span class="like-count">0</span>
+          <div id="comment-section">
+            <h2>Comments</h2>
+            <ul id="comment-list"></ul>
+            <form id="comment-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" rows="1" required></textarea><br><br>
+                <button type="button"class="button button1" onclick="postComment()">Submit Comment</button>
+            </form>
+            <script>
+              function postComment() {
+                  const name = document.getElementById("name").value;
+                  const comment = document.getElementById("comment").value;
+          
+                  if (name && comment) {
+                      const commentList = document.getElementById("comment-list");
+                      const newComment = document.createElement("li");
+                      newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+                      commentList.appendChild(newComment);
+          
+                  
+                      document.getElementById("name").value = "";
+                      document.getElementById("comment").value = "";
+                  }
+              }
+          </script>
+            
+                    
+        </div>
+                        
+          
+          <div id="demo2" style="display:none">
+            <div class="w3-row">
+              <hr>
+              <div class="w3-col l2 m3">
+                <img src="https://t4.ftcdn.net/jpg/02/29/75/83/240_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" style="width:90px;">
+              </div>
+              
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" style="width:90px;">
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>In defence of accountability</h3>
+          <h5>Last Updated <span class="w3-opacity">March 19th, 2023</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="https://i0.wp.com/files.sgbsg.nl/learningspy/uploads/2020/09/07104136/Intelligent-accountability.png?fit=550%2C550&ssl=1" alt="Runway" style="width:100%" class="w3-padding-16">
+        
+          <p>This weekend saw Joe Kirby publish a thoughtful blog in which he calls for an end to Quality Assurance. I agree with Joe's analysis of the causes of poor accountability - or QA - but not his suggested solutions. In his blog, Joe says that "QA warps time, trust, thinking, teaching, leadership and learning." There's no doubt that this can  sometimes be true, but it runs the risk of  
+            <a href="https://learningspy.co.uk/leadership/in-defence-of-accountability/" class="btn btn-primary">Read More →</a></p>
+          </p>
+          <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+          <span class="like-count">0</span>
+          <div id="comment-section">
+    <h2>Comments</h2>
+    <ul id="comment-list"></ul>
+    <form id="comment-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" rows="1" required></textarea><br><br>
+        <button type="button"class="button button1" onclick="postComment()">Submit Comment</button>
+    </form>
+</div>
+
+
+
+          <div id="demo3" style="display:none">
+            <hr>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" style="width:90px;">
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <div class="w3-col l4">
+  
+      <div class="w3-white w3-margin">
+        <img src="https://res.cloudinary.com/pim-red/image/upload/q_auto,w_360,f_auto/v1584573301/klett/cover/9783125012028.jpg" alt="Jane" style="width:50%" class="w3-grayscale">
+        <div class="w3-container w3-black">
+          <h4>Top bloggers to follow</h4>
+          <p><a href="https://www.nomadicmatt.com/">Nomadic Matt</a></br>
+           <a href="https://the-shooting-star.com/">Shivya Nath</a></br>
+          <a href="https://www.saffrontrail.com/about/">Nandita Saffron</a></br>
+            <a href="https://www.funfoodfrolic.com/about/">Hina Gurjal</a></br></p>
+        </div>
+      </div>
+      <hr>
+
+    
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Blogs (Discover Your Interest)</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="data:image/jpeg;base64,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" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Travel</span>
+            <br>
+            
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR66ij3G5l775CKUbXSJScoasSzGxPpfqDnplxmd55lquKhJWrayKUs1L-kOQ&s" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Food</span>
+            <br>
+            
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrkOrNSIX-ahwr7sOxb86BqAuT1uTYj_1xG9U-WmbwKgQ1-5yxHZKQnFhU4CwMt-RriYo&usqp=CAU" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Education</span>
+            <br>
+          
+          </li>
+         
+        </ul>
+      </div>
+      <hr>
+
+      
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Advertise</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+            <img src="C:\Users\Dell\OneDrive\Desktop\DOC\Advertisement  (Flyer).jpg" width="36%">
+          </div>
+        </div>
+      </div>
+      <hr>
+
+    
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Tags</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Wanderlust</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Explore</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Vacation</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SoloTravel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Foodaholic</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Foodie</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">FoodDiary</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Accessories</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HomeCooking</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">FoodTravel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HealthyEating</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">OnlineLearning</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Academic</span><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">StudyTips</span>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Inspiration</h4>
+        </div>
+        <div class="w3-row-padding w3-white">
+          <div class="w3-col s6">
+            <p><img src="https://assets-global.website-files.com/56e9debf633486e330198479/57b67265b49dd66f6e664f97_top-10-travel-bloggers-you-should-be-follow-gloriaatanmo-theblogabroad.jpg" alt="The Blog Abroad" style="width:100%"></p>
+            <a href="http://theblogabroad.com/">The Blog Abroad</a>
+            <p><img src="https://assets-global.website-files.com/56e9debf633486e330198479/57b67244ff90538c6e62e522_top-10-travel-bloggers-you-should-be-follow-abrokenbackpacker-melissa.png" alt="A Broken Backpack" style="width:100%"></p>
+            <a href="http://abrokenbackpack.com/">A Broken Backpack</a>
+          </div>
+          <div class="w3-col s6">
+            <p><img src="http://ghazal.net.au/wp-content/uploads/2017/12/manjula_jain_web-300x450-200x300-1.jpg" alt="Manjula jain" style="width:100%" class="w3-grayscale"></p>
+            <a href="https://www.manjulaskitchen.com/about-manjula/">Manjula jain</a>
+            <p><img src="https://www.travelpayouts.com/blog/wp-content/uploads/2023/06/travelswithelle-1.png" alt="Travel with Elle" style="width:100%"></p>
+            <a href="https://travelswithelle.com/">Travel with Elle</a>
+         </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Follow Us</h4>
+        </div>
+        <div class="w3-container w3-xlarge w3-padding">
+          <a  href="https://www.facebook.com/">@Facebook</a></br>
+  <a href="https://www.instagram.com/" >@Instagram</a></br>
+  <a href="https://in.linkedin.com/">@Linkedin</a></br>
+  <a href="https://twitter.com/login">@Twitter</a></br>
+        </div>
+      </div>
+      <hr>
+      
+      
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <form action="https://thumbs.dreamstime.com/t/youtube-channel-subscribe-button-like-notification-bell-being-clicked-dark-grey-background-148504322.jpg">
+            <h2>Subscribe</h2>
+            <label for="fname">Enter your e-mail below and get notified on the latest blog posts.</label><br>
+            <input type="e-mail" id="fname"><br><br>
+            <input type="submit" class="button button2"value="Subscribe">
+          </form> 
+
+        
+        </div>
+      </div>
+
+    
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+      
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  
+
+  <p>Powered by NGL</p>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <script>
+  let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<script>
+  function checkMediaQuery() {
+      if (window.matchMedia("(max-width: 600px)").matches) {
+          document.body.style.backgroundColor = "lightblue";
+      } else {
+          document.body.style.backgroundColor = "white";
+      }
+  }
+
+  // Initial check on page load
+  checkMediaQuery();
+
+  // Attach the function to the window resize event
+  window.addEventListener("resize", checkMediaQuery);
+</script>
+
+</footer>
+
+
+
+</body>
+</html>

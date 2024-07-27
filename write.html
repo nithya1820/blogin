@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+  </style>
+</head>
+<body style="background-color: rgb(102, 140, 171);">
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <article>
+            <h1 id="blogTitle">Food Blog</h1>
+            <div id="blogContent">
+              <!-- Blog posts will be displayed here -->
+            </div>
+          </article>
+          
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Write a Blog Post</h5>
+              <form id="blogForm">
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                  <label for="content">Content</label>
+                  <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Post</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Blogs</h5>
+              <ul class="list-group">
+                <li class="list-group-item" onclick="loadBlog('Food Blog')">Food Blog</li>
+                <li class="list-group-item" onclick="loadBlog('Travel Blog')">Travel Blog</li>
+                <li class="list-group-item" onclick="loadBlog('Education Blog')">Education Blog</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2023 Blogin Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    var blogPosts = {
+      "Food Blog": [],
+      "Travel Blog": [],
+      "Education Blog": []
+    };
+
+    function displayBlogPosts(blogName) {
+      var blogContent = document.getElementById("blogContent");
+      blogContent.innerHTML = "";
+
+      blogPosts[blogName].forEach(function (post) {
+        var postDiv = document.createElement("div");
+        postDiv.className = "card mb-3";
+        postDiv.innerHTML = `
+          <div class="card-body">
+            <h5 class="card-title">${post.title}</h5>
+            <p class="card-text">${post.content}</p>
+          </div>
+        `;
+        blogContent.appendChild(postDiv);
+      });
+    }
+
+    document.getElementById("blogForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var title = document.getElementById("title").value;
+      var content = document.getElementById("content").value;
+
+      if (title.trim() === "" || content.trim() === "") {
+        alert("Please enter both title and content.");
+        return;
+      }
+
+      var selectedBlog = document.getElementById("blogTitle").innerText;
+      var post = {
+        title: title,
+        content: content,
+      };
+
+      blogPosts[selectedBlog].push(post);
+      displayBlogPosts(selectedBlog);
+
+      document.getElementById("title").value = "";
+      document.getElementById("content").value = "";
+    });
+
+    function loadBlog(blogName) {
+      document.getElementById("blogTitle").innerText = blogName;
+      displayBlogPosts(blogName);
+    }
+
+
+    loadBlog("Food Blog");
+  </script>
+</body>
+</html>

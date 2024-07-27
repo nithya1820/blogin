@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"onclick="myFunction()">Send Message</button>
+          </form>
+          <p id="demo"></p>
+        </div>
+        <div class="col-md-6">
+          <h4>Location</h4>
+          <p>abc street, City, India</p>
+          <h4>Email</h4>
+          <p>blogin@gmail.com</p>
+          <h4>Phone</h4>
+          <p>1234567890</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function myFunction() {
+  let text = "Press a button!\nEither OK or Cancel.";
+  if (confirm(text) == true) {
+  text = "Message sent successfully!";
+   
+  } else {
+    text = "You canceled!";
+    
+  }
+  document.getElementById("demo").innerHTML = text;
+  setTimeout(function() {
+        document.getElementById("demo").innerHTML = "";
+      }, 5000); 
+}
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body{
+      background-color: rgb(232, 236, 241);
+    }
+    div{
+      text-align: center;
+      padding-block: 10px;
+      margin-top: 5%;
+      margin-left: 25%;
+      margin-right: 25%;
+     
+    }
+    form {
+      align-items: center;
+  border: 0dvb;
+}
+
+
+input[type=text],input[type=password] {
+  align-items: center;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-flexbox;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: medium;
+}
+
+
+
+button {
+  background-color: rgb(14, 14, 189);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  font-size: medium;
+}
+button:hover {
+  opacity: 0.8;
+}
+h1{
+  color: rgb(14, 14, 189);
+  fill-opacity: initial;
+}
+
+   
+  </style>
+    <body>
+    <div class="signup">
+    <h1 >Sign up</h1>
+    <form action=".\template.html" target="_blank" method="get">
+       
+        <input type="text" id="name" name="name" placeholder="Name"><br><br>
+        <input type="text" id="email" name="email" placeholder="Email"><br><br>
+        <input type="text" id="age" name="age" placeholder="Age"><br><br>
+        <input type="text" placeholder="Username " id="un" name="un" ><br><br>
+        <input type="password" id="psd" name="psd" placeholder="Password ">
+        <p>
+        <ul style="display: inline-block;text-align: left;">Your password must :
+            <li>Include atleast an UPPER case letter</li>
+            <li>Include a number</li>
+            <li>Be more than 8 characters</li>
+        </ul></p>
+      <button type="submit">CreateAnAccount</button>
+    </form>
+<br><br>
+<p>**By signing up, you agree to Blogin's <a href="ss.asp">Terms of Service</a> and <a href="ss.asp">Privacy Policy</a> . </p>
+  </div>
+</body>
+</html>
